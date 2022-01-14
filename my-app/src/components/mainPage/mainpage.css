@@ -1,0 +1,30 @@
+body{
+ 
+}
+.img{
+  background-repeat: no-repeat;
+   width: 100%;
+  
+}
+.shop-name{
+    margin-top:-30%;
+    margin-left: 40%;
+    font-size: 3rem;
+}
+.new-arrives{
+margin-left: 40%;
+margin-bottom: 8%;
+color: green;
+}
+
+.cards{
+ margin-top:30%;
+}
+.coming-cards{
+
+}
+.coming-soon{
+  margin-left: 40%;
+margin-bottom: 8%;
+margin-top:10%;
+}

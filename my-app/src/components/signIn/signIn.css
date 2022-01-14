@@ -1,0 +1,19 @@
+Form {
+  margin: auto;
+  margin-top: 0%;
+  width: 50%;
+  border: 3px ;
+  padding: 10px;
+}
+.background{
+  width: 36%;
+  height: 30%;
+  margin-left:25%;
+
+}
+.text{
+  color: rgb(255, 113, 47);
+  display: inline-block;
+  margin-left:-27%;
+  font-size: 35px;
+}

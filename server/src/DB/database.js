@@ -1,24 +1,19 @@
-const { MongoClient } = require("mongodb");
-const Db = "mongodb + srv://aek123:<password>@cluster0.yn5rj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority;"
-const client = new MongoClient(Db, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
+const mongoose = require('mongoose');
+mongoose.connect("mongodb+srv://aek123:1234@cluster0.ptuiq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+const express = require('express')
+const app = express()
+const db=mongoose.connection
 
-var _db;
 
-module.exports = {
-    connectToServer: function (callback) {
-        client.connect(function (err, db) {
-            // Verify we got a good "db" object
-            if (db) {
-                _db = db.db("myFirstDatabase");
-                console.log("Successfully connected to MongoDB.");
-            }
-            return callback(err);
-        });
-    },
-    getDb: function () {
-        return _db;
-    },
-};
+module.exports  = () => {
+
+
+    try {
+        db.collection('comicsStore').insertOne({ name: "captian marvel ", company: 'marvel', quantity: 32, price: 100 })
+    } catch (error) {
+        console.log(error);
+    }
+
+    console.log("good job ")
+
+}

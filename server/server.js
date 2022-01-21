@@ -1,15 +1,15 @@
-const  express = require('express') 
-const connectDB= require('../server/src/DB/database')
+import express from 'express' 
+import add from './src/DB/database.js'
 const app = express()
-const port = 4513
-const insert= require('../server/src/DB/database')
+const port = 4600
+
 
 app.use(express.json())
 
 
 app.get('/insert', (req, res) => {
 
-  insert()
+  add()
   res.send('GET request to the homepage')
 })
 

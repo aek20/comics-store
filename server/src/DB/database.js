@@ -5,11 +5,11 @@ const app = express()
 const db=mongoose.connection
 
 
- const add = () => {
+ const add =async () => {
 
 
     try {
-        db.collection('comicsStore').insertOne({ name: "Spider man ", company: 'marvel', quantity: 32, price: 100 })
+       await  db.collection('comicsStore').insertOne({ company: "dc", company: 'marvel', quantity: 32, price: 100 })
         db.save
     } catch (error) {
        console.log(error);

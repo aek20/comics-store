@@ -4,6 +4,7 @@ import Navbar from './components/navbar/Navbar'
 import SignIn from './components/signIn/SignIn'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPage from './components/mainPage/MainPage';
+import Add from './components/addComics/Add';
 function App() {
   return (
     <BrowserRouter basename="/">
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/mainpage">
             <MainPage />
+          </Route>
+          <Route path="/additem">
+            <Add />
           </Route>
         </Switch>
       </div>

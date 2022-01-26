@@ -3,13 +3,13 @@ import add from './src/DB/database.js'
 import deleteCom from './src/DB/delete.js'
 import show from './src/DB/showComics.js'
 const app = express()
-const port = 6849
+const port = 3959
 
 
 app.use(express.json())
 
 
-app.get('/insert', (req, res) => {
+app.post('/insert', (req, res) => {
 
   add()
   res.send('GET request to the homepage')

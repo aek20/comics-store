@@ -3,11 +3,11 @@ mongoose.connect("mongodb+srv://aek123:1234@cluster0.ptuiq.mongodb.net/myFirstDa
 const db = mongoose.connection
 
 
-const deleteCom =  () => {
+const deleteCom = async () => {
 
 
     try {
-        db.collection("comicsStore").deleteOne({ _id: mongoose.Types.ObjectId("61e5f20eef7b1f5a5b6fddc6") }, function (err) {
+     await   db.collection("comicsStore").deleteOne({ _id: mongoose.Types.ObjectId("61eb2dcbf2d42b4b28326940") }, function (err) {
             if (err) {
                 console.log(err)
                 return handleError(err);}

@@ -9,7 +9,7 @@ const db=mongoose.connection
 
 
     try {
-       await  db.collection('comicsStore').insertOne({ company: "dc", company: 'marvel', quantity: 32, price: 100 })
+       await  db.collection('comicsStore').insertOne({ company: "dc", company: 'aekkkk', quantity: 32, price: 100 })
         db.save
     } catch (error) {
        console.log(error);

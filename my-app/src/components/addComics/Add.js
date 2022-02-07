@@ -1,21 +1,26 @@
 import "./add.css"
 import React from 'react';
 import {Form,Col,Row} from 'react-bootstrap'
-const Add =  async() => {
+const Add =  () => {
     function handleSubmit(e) {
         e.preventDefault();
-        console.log('You clicked submit.');
-sending()
-    }
-    let sending = await fetch("https://httpbin.org/post", {
-        method: "POST",
-        body: JSON.stringify({
-            name: "name",
-            email: "email",
-            mobileNumber: "mobileNumber",
-        }),
-    });
+        console.log(e.target[0].value);
+        sending(e.target[0].value, e.target[1].value, e.target[2].value, e.target[3].value)
 
+
+    }
+let sending =  (name,company,quantity ,number)=>{
+    fetch("https://httpbin.org/post", {
+    method: "POST",
+    body: JSON.stringify({
+        name: name,
+        email: company ,
+        quantity: quantity,
+        number:number
+
+    }),
+});
+}
     return (
         <div>
             <Form onSubmit={handleSubmit}>

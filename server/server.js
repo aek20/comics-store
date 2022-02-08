@@ -3,17 +3,26 @@ import add from './src/DB/database.js'
 import deleteCom from './src/DB/delete.js'
 import show from './src/DB/showComics.js'
 import update from './src/DB/update.js'
+import bodyParser from "body-parser"
 const app = express()
-const port = 3929
+const port = 3934
 
 
 app.use(express.json())
+const urlencodedParser=app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-
-app.post('/insert', (req, res) => {
-
-  add()
-  res.send('GET request to the homepage')
+app.post('/insert', urlencodedParser, (req, res) => {
+  // name: name,
+//    email: company,
+//       quantity: quantity,
+//          number: number
+const name=res.body.name
+  const email = res.body.email
+  const quantity = res.body.quantity
+  const number = res.body.number
+  add(name, email, quantity, number)
+  res.send('POST request to the homepage')
 })
 
 app.post('/delete', function (req, res) {

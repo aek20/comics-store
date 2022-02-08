@@ -10,8 +10,9 @@ const Add =  () => {
 
     }
 let sending =  (name,company,quantity ,number)=>{
-    fetch("https://httpbin.org/post", {
+    fetch("http://localhost:3934/insert", {
     method: "POST",
+    
     body: JSON.stringify({
         name: name,
         email: company ,

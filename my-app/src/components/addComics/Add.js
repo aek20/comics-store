@@ -9,17 +9,21 @@ const Add =  () => {
 
 
     }
-let sending =  (name,company,quantity ,number)=>{
-    fetch("http://localhost:3934/insert", {
+let sending =async  (name,company,quantity ,number)=>{
+    await fetch("http://localhost:3911/add", {
     method: "POST",
-    
+        headers: {
+           'Content-Type': 'application/json'
+        },
     body: JSON.stringify({
-        name: name,
-        email: company ,
-        quantity: quantity,
-        number:number
+     
+            name: name,
+            email: company,
+            quantity:quantity,
+             number: number
+        
 
-    }),
+    })
 });
 }
     return (
@@ -59,7 +63,7 @@ let sending =  (name,company,quantity ,number)=>{
                     </Col>
          
                 </Form.Group>
-                <button>ADD</button>
+                <button >ADD</button>
             </Form>
         </div>
     );

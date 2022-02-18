@@ -2,7 +2,18 @@ import React from 'react';
 import './dc.css'
 import { Carousel, Container, Row, Col, Card, Button } from 'react-bootstrap';
 import batman from '../../img/batman.png'
+import { useEffect,useState } from 'react';
 export default function Dc() {
+    const [data, setData]= useState([])
+    useEffect(() => {
+        // GET request using fetch inside useEffect React hook
+        fetch('http://localhost:3911/show')
+            .then(response => response.json())
+            .then(data => setData(data))
+
+
+        // empty dependency array means this effect will only run once (like componentDidMount in classes)
+  }, []);
     return (
         <div>
             <div className="coming-cards">

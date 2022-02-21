@@ -7,9 +7,16 @@ export default function Dc() {
     const [data, setData]= useState([])
     useEffect(() => {
         // GET request using fetch inside useEffect React hook
-        fetch('http://localhost:3911/show')
-            .then(response => response.json())
-            .then(data => setData(data))
+        fetch('http://localhost:3932/show')
+            .then(response => {
+              console.log(response.json())
+            response.json()
+    
+            })
+            .then(data => {setData(data)
+                console.log(data)
+              }  )
+         
 
 
         // empty dependency array means this effect will only run once (like componentDidMount in classes)

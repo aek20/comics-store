@@ -3,24 +3,22 @@ import './dc.css'
 import { Carousel, Container, Row, Col, Card, Button } from 'react-bootstrap';
 import batman from '../../img/batman.png'
 import { useEffect,useState } from 'react';
+import axios from 'axios'
+
+const baseURL = "https://localhost:3939/show";
 export default function Dc() {
-    const [data, setData]= useState([])
-    useEffect(() => {
-        // GET request using fetch inside useEffect React hook
-        fetch('http://localhost:3932/show')
-            .then(response => {
-              console.log(response.json())
-            response.json()
+    const [data, setData]= useState([{}])
     
-            })
-            .then(data => {setData(data)
-                console.log(data)
-              }  )
-         
-
-
-        // empty dependency array means this effect will only run once (like componentDidMount in classes)
-  }, []);
+   
+    useEffect(() => {
+        axios.get(baseURL)
+            .then((response) => {
+                console.log(response.data);
+                console.log(response.status);
+                console.log(response.statusText);
+                console.log(response.headers);
+                console.log(response.config);
+            })} , [])
     return (
         <div>
             <div className="coming-cards">

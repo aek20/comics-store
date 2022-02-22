@@ -10,7 +10,7 @@ const Add =  () => {
 
     }
 let sending =async  (name,company,quantity ,number)=>{
-    await fetch("http://localhost:3911/add", {
+    await fetch("http://localhost:3939/add", {
     method: "POST",
         headers: {
            'Content-Type': 'application/json'

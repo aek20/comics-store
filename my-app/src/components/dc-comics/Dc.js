@@ -5,20 +5,19 @@ import batman from '../../img/batman.png'
 import { useEffect,useState } from 'react';
 import axios from 'axios'
 
-const baseURL = "https://localhost:3939/show";
+const baseURL = "http://localhost:3960/show";
 export default function Dc() {
     const [data, setData]= useState([{}])
-    
+    // https://api.github.com/users/mapbox
    
     useEffect(() => {
-        axios.get(baseURL)
-            .then((response) => {
-                console.log(response.data);
-                console.log(response.status);
-                console.log(response.statusText);
-                console.log(response.headers);
-                console.log(response.config);
-            })} , [])
+        fetch(baseURL
+        )
+            .then(res => res.json())
+            .then(
+                (result) => {
+                   console.log(result)
+                })},[])
     return (
         <div>
             <div className="coming-cards">
@@ -31,7 +30,7 @@ export default function Dc() {
                             <Card style={{ width: '18rem' }}>
                                 <Card.Img variant="top" src={batman} />
                                 <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Title>BATMAN</Card.Title>
                                     <Card.Text>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.

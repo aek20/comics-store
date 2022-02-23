@@ -5,7 +5,7 @@ import batman from '../../img/batman.png'
 import { useEffect,useState } from 'react';
 import axios from 'axios'
 
-const baseURL = "http://localhost:3960/show";
+const baseURL = "http://localhost:4000/show";
 export default function Dc() {
     const [data, setData]= useState([{}])
     // https://api.github.com/users/mapbox
@@ -17,6 +17,7 @@ export default function Dc() {
             .then(
                 (result) => {
                    console.log(result)
+                   setData(result)
                 })},[])
     return (
         <div>
@@ -30,7 +31,7 @@ export default function Dc() {
                             <Card style={{ width: '18rem' }}>
                                 <Card.Img variant="top" src={batman} />
                                 <Card.Body>
-                                    <Card.Title>BATMAN</Card.Title>
+                                    <Card.Title>{data.name}</Card.Title>
                                     <Card.Text>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.

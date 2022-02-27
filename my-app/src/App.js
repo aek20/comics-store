@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter,Switch,Route } from 'react-router-dom'
+import {BrowserRouter,Routes,Route } from 'react-router-dom'
 import Navbar from './components/navbar/Navbar'
 import SignIn from './components/signIn/SignIn'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,20 +17,20 @@ function App() {
 
 
         {/* link between pages */}
-        <Switch>
-          <Route path="/signin">
-         <SignIn />
+        <Routes>
+          <Route path="/signin" element={<SignIn />}>
+        
           </Route>
-          <Route path="/mainpage">
-            <MainPage />
+          <Route path="/mainpage" element={<MainPage />}>
+           
           </Route>
-          <Route path="/additem">
-            <Add />
+          <Route path="/additem" element={<Add />}>
+         
           </Route>
-          <Route path="/dc">
-            <Dc />
+          <Route path="/dc" element={<Dc />}>
+         
           </Route>
-        </Switch>
+        </Routes>
       </div>
 
     </BrowserRouter>

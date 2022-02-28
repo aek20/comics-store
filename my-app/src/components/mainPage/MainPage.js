@@ -1,7 +1,7 @@
 import './mainpage.css'
 import React from 'react'
 import {Carousel,Container,Row,Col,Card,Button} from 'react-bootstrap'
-import img from '../../img/comic.png'
+import img from '../../img/spider.png'
 import img2 from '../../img/spider.png'
 import batman from '../../img/batman.png'
 export default function MainPage() {

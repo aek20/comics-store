@@ -3,3 +3,18 @@
 margin-bottom: 8%;
 margin-top:10%;
 }
+.card{
+ 
+  border-radius: 25px;
+  background-color: wheat;
+}
+.img{
+  width: 40%;
+  height: 100%;
+  border-radius: 0px;
+  margin-left:32% ;
+  margin-top: 10%;
+}
+.click{
+  margin-left:  24%;
+}

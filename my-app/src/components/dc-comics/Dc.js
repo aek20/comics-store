@@ -2,6 +2,7 @@ import React from 'react';
 import './dc.css'
 import { Carousel, Container, Row, Col, Card, Button } from 'react-bootstrap';
 import batman from '../../img/batman.png'
+import comic from '../../img/comic.png'
 import { useEffect,useState } from 'react';
 import axios from 'axios'
 
@@ -27,23 +28,23 @@ export default function Dc() {
 
                     <Row>
                         {/* first card  */}
-                        <Col xs>
-                            <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={batman} />
+                        <Col xs >
+                            <Card className="card" style={{ width: '18rem' }}>
+                                <Card.Img className="img" variant="top" src={comic} />
                                 <Card.Body>
                                     <Card.Title>{data.name}</Card.Title>
                                     <Card.Text>
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
+                                    <Button  className="click" variant="primary">Go somewhere</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
                         {/* second card */}
                         <Col xs={{ order: 12 }}>
                             <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src="holder.js/100px180" />
+                                <Card.Img variant="top" src={batman} />
                                 <Card.Body>
                                     <Card.Title>Card Title</Card.Title>
                                     <Card.Text>
@@ -57,7 +58,7 @@ export default function Dc() {
                         {/* third card */}
                         <Col xs={{ order: 1 }}>
                             <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src="holder.js/100px180" />
+                                <Card.Img variant="top" src={batman} />
                                 <Card.Body>
                                     <Card.Title>Card Title</Card.Title>
                                     <Card.Text>

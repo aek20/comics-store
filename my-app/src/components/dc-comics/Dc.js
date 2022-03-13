@@ -29,6 +29,7 @@ export default function Dc() {
                     <Row>
                         {/* first card  */}
                         <Col xs >
+                     
                             <Card className="card" style={{ width: '18rem' }}>
                                 <Card.Img className="img" variant="top" src={comic} />
                                 <Card.Body>

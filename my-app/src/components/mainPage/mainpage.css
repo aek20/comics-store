@@ -20,11 +20,17 @@ color: green;
 .cards{
  margin-top:30%;
 }
-.coming-cards{
+.coming-soon{
+
+  margin-left: 40%;
+padding-top:10%;
 
 }
-.coming-soon{
-  margin-left: 40%;
-margin-bottom: 8%;
+.coming-cards{
 margin-top:10%;
+
+}
+
+.coming-container{
+  margin-top:-10%;
 }

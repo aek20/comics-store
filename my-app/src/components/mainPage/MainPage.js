@@ -63,7 +63,8 @@ export default function MainPage() {
         </div>
             <div className="coming-cards">
                 <h1 className="coming-soon">Coming Soon</h1>
-                <Container >
+                
+                <Container className="coming-container">
 
                     <Row>
                         {/* first card  */}

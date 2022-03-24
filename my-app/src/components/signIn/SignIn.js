@@ -14,7 +14,7 @@ export default function SignIn() {
             // maybe trigger a loading screen
             return;
         }
-        if (user) navigate("/dashboard");
+        if (user) navigate("/dc");
     }, [user, loading]);
     return (
         <div>

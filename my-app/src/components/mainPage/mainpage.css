@@ -1,7 +1,7 @@
 body{
  
 }
-.img{
+.background-img{
   background-repeat: no-repeat;
    width: 100%;
   
@@ -10,6 +10,7 @@ body{
     margin-top:-30%;
     margin-left: 40%;
     font-size: 3rem;
+    color: white;
 }
 .new-arrives{
 margin-left: 40%;
@@ -17,9 +18,32 @@ margin-bottom: 8%;
 color: green;
 }
 
-.cards{
- margin-top:30%;
+/* cards style */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  width: 80%;
+  height: 120%;
+  border-radius: 50%;
 }
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.background-img{
+  width: 80%;
+}
+
+
+.button{
+  margin-left:25%;
+ margin-top: 20%;
+}
+
 .coming-soon{
 
   margin-left: 40%;

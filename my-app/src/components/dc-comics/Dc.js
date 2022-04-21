@@ -3,6 +3,7 @@ import './dc.css'
 import { Carousel, Container, Row, Col, Card, Button } from 'react-bootstrap';
 import batman from '../../img/batman.png'
 import comic from '../../img/comic.png'
+import dc from "../../img/dc.jpg"
 import { useEffect,useState } from 'react';
 import axios from 'axios'
 
@@ -24,6 +25,7 @@ export default function Dc() {
         <div>
             <div className="coming-cards">
                 <h1 className="coming-soon">DC comics</h1>
+                <img src={dc} className="background" />
                 <Container >
 
                     <Row>

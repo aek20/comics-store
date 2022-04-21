@@ -64,6 +64,7 @@ let sending =async  (name,company,quantity ,number)=>{
          
                 </Form.Group>
                 <button >ADD</button>
+                
             </Form>
         </div>
     );

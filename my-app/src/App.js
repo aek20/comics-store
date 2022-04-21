@@ -10,6 +10,7 @@ import SignUp from "../src/components/signUp/SignUp.js"
 import Contact from "../src/components/contactUs/Contact.js"
 import Marvel from "../src/components/marvel/Marvel.js"
 import Cart from "../src/components/cart/Cart.js"
+
 function App() {
   return (
     <BrowserRouter basename="/">
@@ -35,6 +36,7 @@ function App() {
           <Route path="/additem" element={<Add />}>
          
           </Route>
+          
           <Route path="/dc" element={<Dc />}>
          
           </Route>

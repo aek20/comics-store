@@ -9,8 +9,8 @@ const Add =  () => {
 
 
     }
-let sending =async  (name,company,quantity ,number)=>{
-    await fetch("http://localhost:3939/add", {
+    let sending = async (company, name, release,quantity )=>{
+    await fetch("http://localhost:4049/add", {
     method: "POST",
         headers: {
            'Content-Type': 'application/json'
@@ -18,9 +18,9 @@ let sending =async  (name,company,quantity ,number)=>{
     body: JSON.stringify({
      
             name: name,
-            email: company,
+        release: release,
             quantity:quantity,
-             number: number
+        company: company
         
 
     })
@@ -47,7 +47,7 @@ let sending =async  (name,company,quantity ,number)=>{
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="plaintext">
                     <Form.Label column sm="2">
-                       quantity 
+                     release date
                     </Form.Label>
                     <Col sm="10">
                         <Form.Control type="plaintext" placeholder="enter comic price " />
@@ -55,7 +55,7 @@ let sending =async  (name,company,quantity ,number)=>{
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="plaintext">
                     <Form.Label column sm="2">
-                        price
+                        quantity 
                     </Form.Label>
                     <Col sm="10">
                         <Form.Control type="plaintext" placeholder="enter company name" />

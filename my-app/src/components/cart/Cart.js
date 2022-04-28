@@ -44,13 +44,15 @@ store.dispatch(setCartCurrency("USD"));
 
 class App extends PureComponent {
     state = {
+        
         product: {
-            name: "iPadCase",
+            name: "super man",
             id: "ipad-case",
             path: "/shop/ipad-case/",
             properties: {
                 color: [
                     "red",
+
                   
                     {
                         additionalCost: {

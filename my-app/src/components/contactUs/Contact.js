@@ -3,6 +3,10 @@ import twitter from "../../img/twitter.png"
 import "./contact.css"
 export default function Contact() {
   return (
-    <div><img className="twitter" src={twitter} /></div>
+    <div>  
+      <a href='https://twitter.com/?lang=ar'>
+     <img className="twitter" src={twitter} />
+  </a>
+    </div>
   )
 }

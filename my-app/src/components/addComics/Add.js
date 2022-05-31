@@ -5,12 +5,12 @@ const Add =  () => {
     function handleSubmit(e) {
         e.preventDefault();
         console.log(e.target[0].value);
-        sending(e.target[0].value, e.target[1].value, e.target[2].value, e.target[3].value)
+        sending(e.target[0].value, e.target[1].value, e.target[2].value, e.target[3].value, e.target[4].value)
 
 
     }
-    let sending = async (company, name, release,quantity )=>{
-    await fetch("http://localhost:4049/add", {
+    let sending = async (company, name, release,quantity ,price )=>{
+    await fetch("http://localhost:4050/add", {
     method: "POST",
         headers: {
            'Content-Type': 'application/json'
@@ -20,7 +20,8 @@ const Add =  () => {
             name: name,
         release: release,
             quantity:quantity,
-        company: company
+        company: company , 
+        price:price
         
 
     })
@@ -62,6 +63,16 @@ const Add =  () => {
 
                     </Col>
          
+                </Form.Group>
+                <Form.Group as={Row} className="mb-3" controlId="plaintext">
+                    <Form.Label column sm="2">
+                        price
+                    </Form.Label>
+                    <Col sm="10">
+                        <Form.Control type="plaintext" placeholder="enter company name" />
+
+                    </Col>
+
                 </Form.Group>
                 <button >ADD</button>
                 

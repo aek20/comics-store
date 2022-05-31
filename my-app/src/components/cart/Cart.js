@@ -52,9 +52,9 @@ class App extends PureComponent {
             properties: {
                 color: [
                     "red",
-
+"green"
                   
-                    {
+               ,     {
                         additionalCost: {
                             GBP: 1,
                             EUR: 2,

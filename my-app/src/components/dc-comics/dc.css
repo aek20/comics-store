@@ -4,9 +4,11 @@ margin-bottom: 8%;
 margin-top:10%;
 }
 .card{
- 
-  border-radius: 25px;
+margin-top:60%;
+  border-radius: 40px;
   background-color: wheat;
+height: 70%;
+
 }
 .img{
   width: 40%;

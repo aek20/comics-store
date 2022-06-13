@@ -7,10 +7,11 @@ body{
   
 }
 .shop-name{
-    margin-top:-30%;
+    margin-top:-70%;
     margin-left: 40%;
     font-size: 3rem;
     color: white;
+    margin-bottom: 70%;
 }
 .new-arrives{
 margin-left: 40%;
@@ -35,7 +36,7 @@ color: green;
   padding: 2px 16px;
 }
 .background-img{
-  width: 80%;
+  width: 100%;
 }
 
 

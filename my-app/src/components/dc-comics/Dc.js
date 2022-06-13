@@ -55,7 +55,12 @@ export default function Dc() {
   
                 // listitems will list all comics in database
     const listItems = data.map((comic) =>
-        <Card style={{ width: '18rem' }}>
+          
+                
+                    <Col >
+            
+               
+            <Card style={{ width: '18rem'}} className="card">
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
                 <Card.Title>{comic.name} </Card.Title>
@@ -66,11 +71,19 @@ export default function Dc() {
                 <Button variant="primary" onClick={()=>{addToCart(comic.company, comic.name, comic.release_date, comic.quantity, comic.price)}}>Add </Button>
             </Card.Body>
         </Card>
+                </Col>
+   
+          
     );
 
     return (
         <div>
-{listItems}
+            <Container>
+                <Row >
+            {listItems}
+            </Row>
+        </Container>
+        <br /><br />
         </div>
       
     );

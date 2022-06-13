@@ -7,10 +7,11 @@ import batman from '../../img/batman.png'
 export default function MainPage() {
     return (
         <div >
-        <div className="" >
+         
+        
             <img src={img} alt="" className="background-img" />
+            
             <h1 className="shop-name"> comic shop</h1>
-        </div>
         <div className="cards">
             <h1 className="new-arrives">New Arrives</h1>
                 <Container >

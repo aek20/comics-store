@@ -23,13 +23,11 @@ function App() {
 
         {/* link between pages */}
         <Routes>
-          <Route path="/signin" element={<SignIn />}>
-        
-          </Route>
+ 
           <Route path="/mainpage" element={<MainPage />}>
            
           </Route>
-             <Route path="/signup" element={<SignUp />} />
+        
           <Route path="/cart" element={<Cart />} />
           <Route path="/marvel" element={<Marvel />} />
           <Route path="/contact" element={<Contact />} />

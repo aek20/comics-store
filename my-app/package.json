@@ -23,8 +23,7 @@
     "web-vitals": "^2.1.3"
   },
   "scripts": {
-    "start": "set port=6343&& react-scripts start",
-    "build": "react-scripts build",
+    "start": "set port=6343&& react-scripts --openssl-legacy-provider start",   "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
